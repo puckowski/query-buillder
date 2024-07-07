@@ -1,0 +1,16 @@
+<div class="sql-component-wrapper">
+  <div class="sql-component-grid" #compContainer></div>
+</div>
+
+<form [formGroup]="formGroup">
+<p-dropdown [options]="componentOptions" placeholder="Select a composable" formControlName="selectedComponent" />
+</form>
+
+<button pButton (click)="addSqlComponent()">Add SQL Component</button>
+<button pButton (click)="compileAll()">Compile All</button>
+<button pButton label="Reset All" (click)="resetAll()"></button>
+
+<div *ngIf="compiledSql">
+  <p>Compiled SQL:</p>
+  <pre>{{ compiledSql }}</pre>
+</div>

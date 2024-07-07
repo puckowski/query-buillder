@@ -1,0 +1,27 @@
+.sql-component-wrapper {
+    container-type: inline-size;
+}
+
+.sql-component-grid {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+}
+
+@container (width >=800px) {
+    .sql-component-grid {
+        grid-template-columns: auto auto;
+    }
+}
+
+@container (width >=1200px) {
+    .sql-component-grid {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@container (width >=1600px) {
+    .sql-component-grid {
+        grid-template-columns: auto auto auto auto;
+    }
+}
